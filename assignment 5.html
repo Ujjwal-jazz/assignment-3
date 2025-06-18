@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Split Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            margin-top: 50px; /* height of navbar */
+        }
+
+        .split {
+            flex: 1;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .overlay h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .overlay button {
+            padding: 8px 16px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.3s ease;
+        }
+
+        .overlay button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#">Store</a>
+        <a href="#">Mac</a>
+        <a href="#">iPad</a>
+        <a href="#">iPhone</a>
+        <a href="#">Watch</a>
+        <a href="#">AirPod</a>
+        <a href="#">TV & Homes</a>
+    </div>
+
+    <div class="container">
+        <div class="split" style="background-image: url('https://tse2.mm.bing.net/th?id=OIP.wsgs8g0IM1E3P-MUALdN8wHaHa&pid=Api&P=0&h=180');">
+            <div class="overlay">
+                <h1>Welcome to iPhone</h1>
+                <p>beauty outside, beast inside.</p>
+                <button>Buy</button>
+            </div>
+        </div>
+        <div class="split" style="background-image: url('https://tse4.mm.bing.net/th?id=OIP.IsF8CAK7te650vlk2z5bwwHaEK&pid=Api&P=0&h=180');">
+            <div class="overlay">
+                <h1>Welcome to iPhone</h1>
+                <p>beauty outside, beast inside.</p>
+                <button>Buy</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
